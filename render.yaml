@@ -1,0 +1,7 @@
+services:
+  - type: cron
+    name: nyt-auto-redeem
+    schedule: "0 6 * * *"  # every day at 6 AM UTC
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "bash start.sh"
